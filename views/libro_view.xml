@@ -33,6 +33,17 @@
             </field>
         </record>
         
+        <record model="ir.ui.view" id="biblioteca.libro_search">
+            <field name="name">libro form</field>
+            <field name="model">biblioteca.libro</field>
+            <field name="arch" type="xml">
+                <search string="Libros">
+                    <field name="title" string="Title and ISBN"
+                    filter_domain="['|', ('title', 'ilike', self), ('isbn', 'ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
         <!-- actions opening views on models -->
         <record model="ir.actions.act_window" id="biblioteca.libro_action_window">
             <field name="name">libro window</field>
