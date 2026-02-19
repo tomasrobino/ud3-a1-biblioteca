@@ -24,6 +24,7 @@ Long description of module's purpose
         # 'security/ir.model.access.csv',
         'views/autor_view.xml',
         'views/libro_view.xml',
+        'views/prestamo_view.xml',
         'views/menu_views.xml',
         'views/templates.xml',
     ],

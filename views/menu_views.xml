@@ -7,5 +7,7 @@
         action="biblioteca.libro_action_window"/>
         <menuitem name="Autor" id="biblioteca.autor_menu" parent="biblioteca.menu_root"
         action="biblioteca.autor_action_window"/>
+        <menuitem name="Prestamo" id="biblioteca.prestamo_menu" parent="biblioteca.menu_root"
+        action="biblioteca.prestamo_action_window"/>
     </data>
 </odoo>

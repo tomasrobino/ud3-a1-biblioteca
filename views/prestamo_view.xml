@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="biblioteca.prestamo_list">
+            <field name="name">prestamo list</field>
+            <field name="model">biblioteca.prestamo</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="readerName"/>
+                    <field name="lendingDate"/>
+                    <field name="returnDate"/>
+                    <field name="libro_id"/>
+                </list>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="biblioteca.prestamo_form">
+            <field name="name">prestamo form</field>
+            <field name="model">biblioteca.prestamo</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="readerName"/>
+                            <field name="lendingDate"/>
+                            <field name="returnDate"/>
+                            <field name="libro_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="biblioteca.prestamo_action_window">
+            <field name="name">prestamo window</field>
+            <field name="res_model">biblioteca.prestamo</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>
