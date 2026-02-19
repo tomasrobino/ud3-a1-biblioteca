@@ -1,1 +1,1 @@
-from . import libro
+from . import libro, autor, prestamo
