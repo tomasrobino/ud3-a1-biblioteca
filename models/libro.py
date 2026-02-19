@@ -7,8 +7,10 @@ class libro(models.Model):
     title = fields.Char()
     isbn = fields.Char()
     publishingDate = fields.Date()
-    autor_id = fields.Many2one('biblioteca.autor', string='Autor')
     
+    autor_id = fields.Many2one('biblioteca.autor', string='Autor')
+    prestamos = fields.One2many('biblioteca.libro', 'libro_id', string="Prestamos")
+
 #    @api.depends('value')
 #    def _value_pc(self):
 #        for record in self:

@@ -7,4 +7,5 @@ class autor(models.Model):
     name = fields.Char()
     nationality = fields.Char()
     birthDate = fields.Date()
+    
     libros = fields.One2many('biblioteca.libro', 'autor_id', string='Libros')
