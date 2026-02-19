@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <!-- Top menu item -->
+        <menuitem name="biblioteca" id="biblioteca.menu_root"/>
+        <!-- actions -->
+        <menuitem name="Libro" id="biblioteca.libro_menu" parent="biblioteca.menu_root"
+        action="biblioteca.libro_action_window"/>
+        <menuitem name="Autor" id="biblioteca.autor_menu" parent="biblioteca.menu_root"
+        action="biblioteca.autor_action_window"/>
+    </data>
+</odoo>
