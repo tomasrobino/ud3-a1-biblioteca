@@ -15,6 +15,24 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="biblioteca.libro_form">
+      <field name="name">libro form</field>
+      <field name="model">biblioteca.libro</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="title"/>
+              <field name="isbn"/>
+              <field name="publishingDate"/>
+              <field name="autor_id"/>
+              <field name="prestamos"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="biblioteca.libro_action_window">
       <field name="name">libro window</field>
