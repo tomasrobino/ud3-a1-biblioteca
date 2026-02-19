@@ -9,6 +9,7 @@
                     <field name="readerName"/>
                     <field name="lendingDate"/>
                     <field name="returnDate"/>
+                    <field name="prestamoLength"/>
                     <field name="libro_id"/>
                 </list>
             </field>
@@ -24,6 +25,7 @@
                             <field name="readerName"/>
                             <field name="lendingDate"/>
                             <field name="returnDate"/>
+                            <field name="prestamoLength"/>
                             <field name="libro_id"/>
                         </group>
                     </sheet>

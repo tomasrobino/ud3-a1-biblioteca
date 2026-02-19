@@ -8,6 +8,7 @@ class prestamo(models.Model):
     readerName = fields.Char()
     lendingDate = fields.Date()
     returnDate = fields.Date()
+    prestamoLength = fields.Integer(compute='_compute_prestamoLength')
 
     libro_id = fields.Many2one('biblioteca.libro', string='Libro')
 
@@ -16,3 +17,10 @@ class prestamo(models.Model):
         for record in self:
             if record.lendingDate >= record.returnDate:
                 raise ValidationError("La fecha de devolucion debe ser posterior a la de prestamo")
+
+    @api.depends("lendingDate", "returnDate")
+    def _compute_prestamoLength(self):
+        for record in self:
+            if record.lendingDate and record.returnDate:
+                record.prestamoLength = (record.returnDate - record.lendingDate).days
+            else: record.prestamoLength = 0
